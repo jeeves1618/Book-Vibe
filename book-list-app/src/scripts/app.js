@@ -76,9 +76,13 @@ function renderBooks(books) {
 
     booksByYear[year].forEach((book) => {
       const tr = document.createElement("tr");
+      // Add shoppingUrl as link to title, open in new window if available
+      const titleCell = book.shoppingUrl
+        ? `<a href="${book.shoppingUrl}" target="_blank" rel="noopener noreferrer">${book.bookTitle}</a>`
+        : book.bookTitle;
       tr.innerHTML = `
         <td>${serialNumber--}</td>
-        <td>${book.bookTitle}</td>
+        <td>${titleCell}</td>
         <td>${book.authorFirstName} ${book.authorLastName}</td>
         <td>${book.bookGenre}</td>
         <td>${book._sortDate}</td>
