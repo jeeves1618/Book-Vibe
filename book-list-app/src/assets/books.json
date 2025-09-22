@@ -1,0 +1,27 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "dateOfPurchase": "2023-10-01"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "dateOfPurchase": "2023-09-15"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "dateOfPurchase": "2023-08-20"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "dateOfPurchase": "2023-07-10"
+  },
+  {
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "dateOfPurchase": "2023-06-05"
+  }
+]
