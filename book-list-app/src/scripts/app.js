@@ -8,10 +8,16 @@ async function loadAndDisplayBooks() {
     if (!response.ok) throw new Error("Network response was not ok");
     const books = await response.json();
 
-    // Sort books in reverse chronological order of dateOfPurchase
-    books.sort(
-      (a, b) => new Date(b.dateOfPurchase) - new Date(a.dateOfPurchase)
-    );
+    // Use dateOfReading unless it's "0001-01-01", then use dateOfPurchase
+    books.forEach((book) => {
+      book._sortDate =
+        book.dateOfReading && book.dateOfReading !== "0001-01-01"
+          ? book.dateOfReading
+          : book.dateOfPurchase;
+    });
+
+    // Sort books in reverse chronological order of the chosen date
+    books.sort((a, b) => new Date(b._sortDate) - new Date(a._sortDate));
 
     allBooks = books; // Store for filtering
     renderBooks(books);
@@ -46,10 +52,10 @@ function renderBooks(books) {
   const tbody = document.getElementById("book-table-body");
   tbody.innerHTML = "";
 
-  // Group books by year
+  // Group books by year (from _sortDate)
   const booksByYear = {};
   books.forEach((book) => {
-    const year = new Date(book.dateOfPurchase).getFullYear();
+    const year = new Date(book._sortDate).getFullYear();
     if (!booksByYear[year]) booksByYear[year] = [];
     booksByYear[year].push(book);
   });
@@ -75,7 +81,7 @@ function renderBooks(books) {
         <td>${book.bookTitle}</td>
         <td>${book.authorFirstName} ${book.authorLastName}</td>
         <td>${book.bookGenre}</td>
-        <td>${book.dateOfPurchase}</td>
+        <td>${book._sortDate}</td>
       `;
       tbody.appendChild(tr);
     });

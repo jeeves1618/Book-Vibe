@@ -11,7 +11,7 @@
     />
     <style>
       body {
-        font-family: "Oxygen", Arial, sans-serif;
+        font-family: "Times New Roman", Times, serif;
         margin: 0;
         padding: 16px;
         background: #f9f9f9;
@@ -44,7 +44,37 @@
         border-collapse: collapse;
         margin-top: 16px;
         background: #fff;
-        table-layout: fixed;
+        table-layout: auto; /* Changed from fixed to auto */
+      }
+      th:first-child,
+      td:first-child {
+        width: 1%;
+        white-space: nowrap;
+        text-align: right;
+      }
+      th:nth-child(2),
+      td:nth-child(2) {
+        min-width: 180px;
+        max-width: 320px;
+        white-space: normal;
+      }
+      th:nth-child(3),
+      td:nth-child(3) {
+        min-width: 120px;
+        max-width: 200px;
+        white-space: normal;
+      }
+      th:nth-child(4),
+      td:nth-child(4) {
+        min-width: 90px;
+        max-width: 140px;
+        white-space: normal;
+      }
+      th:nth-child(5),
+      td:nth-child(5) {
+        min-width: 110px;
+        max-width: 160px;
+        white-space: nowrap;
       }
       thead th {
         position: sticky;
@@ -125,7 +155,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Book List</h1>
+      <h1>My Reading Log</h1>
       <input
         type="text"
         id="search-input"
