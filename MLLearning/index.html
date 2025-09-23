@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      2-Month Study Planner — Practical Statistics for Data Scientists
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #0d6efd;
+        --muted: #6c757d;
+      }
+      body {
+        background: #f7f9fc;
+        color: #102a43;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .hero {
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.08),
+          rgba(13, 110, 253, 0.02)
+        );
+        border-radius: 12px;
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+      h1 small {
+        display: block;
+        font-size: 0.55em;
+        color: var(--muted);
+      }
+      table thead th {
+        background: #ffffffcc;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(4px);
+      }
+      .week-badge {
+        min-width: 88px;
+      }
+      .task-list {
+        font-size: 0.95rem;
+      }
+      .progress {
+        height: 10px;
+        border-radius: 10px;
+      }
+      .card {
+        border-radius: 12px;
+      }
+      .print-hide {
+        display: inline-block;
+      }
+      @media print {
+        .print-hide {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="hero d-flex justify-content-between align-items-start">
+        <div>
+          <h1 class="mb-1">
+            2‑Month Study Planner
+            <small>Practical Statistics for Data Scientists — 2nd Ed.</small>
+          </h1>
+          <p class="mb-0 text-muted">
+            Start date: <strong>27 September 2025</strong> · Duration: 8 weeks ·
+            Weekly milestones, reading + practice
+          </p>
+        </div>
+        <div class="text-end print-hide">
+          <button
+            class="btn btn-outline-secondary btn-sm"
+            onclick="window.print()"
+          >
+            Print planner
+          </button>
+        </div>
+      </div>
+
+      <div class="card my-3">
+        <div class="card-body">
+          <h5 class="card-title">Legend & Tips</h5>
+          <p class="card-text text-muted mb-1">
+            Use the checkboxes to mark weekly completion. Each row includes the
+            reading scope, key topics, and practice tasks. Copy this HTML into a
+            browser to interact with the checkboxes and progress bar.
+          </p>
+          <div class="d-flex gap-3 align-items-center">
+            <div class="d-flex align-items-center">
+              <span class="badge bg-primary me-2">Reading</span
+              ><small class="text-muted">Core chapter sections</small>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="badge bg-success me-2">Practice</span
+              ><small class="text-muted">Coding / exercises</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive mb-4">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th class="fw-semibold">Week</th>
+              <th class="fw-semibold">Dates</th>
+              <th class="fw-semibold">Reading Focus</th>
+              <th class="fw-semibold">Key Topics</th>
+              <th class="fw-semibold">Practice & Deliverables</th>
+              <th class="fw-semibold text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 1</span></td>
+              <td>Sep 27 — Oct 3, 2025</td>
+              <td>
+                Chapter 1: Elements of Structured Data → Exploring the Data
+                Distribution (start → p.26)
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Data frames, rectangular vs nonrectangular</li>
+                  <li>Location & variability: mean, median, SD, percentiles</li>
+                  <li>Boxplots, histograms, density plots</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Compute mean/median/SD for sample datasets</li>
+                  <li>
+                    Plot histograms, boxplots, density estimates (Python/R)
+                  </li>
+                  <li>Notebook: short EDA on a public dataset (CSV)</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="1"
+                    id="w1"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 2</span></td>
+              <td>Oct 4 — Oct 10, 2025</td>
+              <td>Chapter 1: Exploring Binary & Categorical Data → Summary</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Mode, expected value, probability basics</li>
+                  <li>Correlation, scatterplots, hexbin</li>
+                  <li>Visualizing categorical vs numeric</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Correlation matrix + heatmap</li>
+                  <li>Create hexbin and categorical plots</li>
+                  <li>Notebook: EDA report (2–3 plots + short notes)</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="2"
+                    id="w2"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 3</span></td>
+              <td>Oct 11 — Oct 17, 2025</td>
+              <td>Chapter 2: Random Sampling → Regression to the Mean</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Bias vs variance, selection bias</li>
+                  <li>Random sampling, when size matters</li>
+                  <li>Regression to the mean</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Simulate biased vs unbiased sampling</li>
+                  <li>Visualize selection bias effects</li>
+                  <li>Short write-up on sampling quality</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="3"
+                    id="w3"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 4</span></td>
+              <td>Oct 18 — Oct 24, 2025</td>
+              <td>Chapter 2: Sampling Distribution → Summary (end Ch.2)</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>CLT, standard error, bootstrap</li>
+                  <li>Confidence intervals, normal & t dist, QQ-plots</li>
+                  <li>Poisson, exponential, Weibull basics</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Bootstrap CI for mean/median</li>
+                  <li>Simulate CLT with sampling</li>
+                  <li>QQ-plot / distribution fitting exercise</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="4"
+                    id="w4"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 5</span></td>
+              <td>Oct 25 — Oct 31, 2025</td>
+              <td>
+                Chapter 3: Statistical Experiments & Significance Testing (full)
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>A/B testing, hypothesis tests, p-values</li>
+                  <li>Permutation tests, t-tests, ANOVA, multiple testing</li>
+                  <li>Power and sample size</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Implement permutation & bootstrap tests</li>
+                  <li>Simulate A/B tests and compute power</li>
+                  <li>Notebook: A/B experiment analysis</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="5"
+                    id="w5"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 6</span></td>
+              <td>Nov 1 — Nov 7, 2025</td>
+              <td>Chapter 4: Regression & Prediction (full)</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Simple & multiple linear regression</li>
+                  <li>Cross-validation, model selection, diagnostics</li>
+                  <li>Splines, GAMs, multicollinearity</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>King County housing example: fit models</li>
+                  <li>Residual analysis, VIF for multicollinearity</li>
+                  <li>CV & model selection notebook</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="6"
+                    id="w6"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 7</span></td>
+              <td>Nov 8 — Nov 14, 2025</td>
+              <td>Chapter 5: Classification (full)</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Naive Bayes, LDA, logistic regression</li>
+                  <li>Evaluation: confusion matrix, ROC/AUC, lift</li>
+                  <li>Imbalanced data strategies</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>Train logistic & Naive Bayes classifiers</li>
+                  <li>Compare metrics and plot ROC</li>
+                  <li>Experiment with oversampling/undersampling</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="7"
+                    id="w7"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge bg-primary week-badge">Week 8</span></td>
+              <td>Nov 15 — Nov 23, 2025</td>
+              <td>Chapter 6 & 7: Statistical ML + Unsupervised Learning</td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>KNN, trees, bagging, boosting, regularization</li>
+                  <li>PCA, clustering (k-means, hierarchical), scaling</li>
+                  <li>Model tuning & hyperparameters</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="mb-0 task-list">
+                  <li>PCA on a real dataset + interpret components</li>
+                  <li>Train Random Forest and XGBoost models</li>
+                  <li>Final mini-project combining EDA, model, clustering</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <div class="form-check">
+                  <input
+                    class="form-check-input week-check"
+                    type="checkbox"
+                    data-week="8"
+                    id="w8"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mb-4">
+        <div
+          class="card-body d-flex justify-content-between align-items-center gap-3"
+        >
+          <div>
+            <h6 class="mb-1">Overall Progress</h6>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Overall progress"
+            >
+              <div id="overallBar" class="progress-bar" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="text-end">
+            <small class="text-muted"
+              >Weeks completed: <span id="completedCount">0</span>/8</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5 text-muted small">
+        <strong>Notes:</strong> The planner assumes a hands-on approach (read →
+        code → reflect). Replace datasets with your own work data where
+        appropriate. Use Jupyter/Colab or RStudio to maintain notebooks for each
+        week.
+      </div>
+    </div>
+
+    <script>
+      const checks = document.querySelectorAll(".week-check");
+      const total = checks.length;
+      const overallBar = document.getElementById("overallBar");
+      const completedCount = document.getElementById("completedCount");
+      function updateProgress() {
+        const done = Array.from(checks).filter((c) => c.checked).length;
+        const pct = Math.round((done / total) * 100);
+        overallBar.style.width = pct + "%";
+        overallBar.textContent = pct + "%";
+        completedCount.textContent = done;
+      }
+      checks.forEach((c) => c.addEventListener("change", updateProgress));
+      // initialize
+      updateProgress();
+    </script>
+  </body>
+</html>
