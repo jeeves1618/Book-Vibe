@@ -1,364 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3-Month Spring & Microservices Learning Planner</title>
-    <!-- Bootstrap CSS CDN -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spring & Microservices Courses — Study Planner</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <style>
+      :root {
+        --accent: #0d6efd;
+        --muted: #6c757d;
+      }
       body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-        margin: 0;
-        color: #333;
-        font-size: 1.25rem;
+        background: #f7fbff;
+        color: #0b2545;
+        font-family: Inter, system-ui, -apple-system, “Segoe UI”, Roboto,
+          Helvetica, Arial;
+        margin: 20px;
       }
-      h1 {
-        text-align: center;
+      .hero {
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.08),
+          rgba(13, 110, 253, 0.02)
+        );
+        border-radius: 12px;
+        padding: 18px;
         margin-bottom: 18px;
-        font-weight: 700;
-        color: #2a5298;
-        letter-spacing: 1px;
-        text-shadow: 0 2px 8px #e0eafc;
       }
-      .tile {
-        border: none;
-        border-radius: 18px;
-        padding: 32px 28px;
-        margin-bottom: 32px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
-        transition: transform 0.15s;
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        height: 100%;
+      h1 small {
+        display: block;
+        font-size: 0.6em;
+        color: var(--muted);
       }
-      .tile:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.13);
+      .card {
+        border-radius: 12px;
       }
-      .course1 {
-        background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-      }
-      .course2 {
-        background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-      }
-      .week {
-        background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      table thead th {
+        background: #ffffffcc;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(4px);
       }
       .buffer {
-        background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-        border: 2px dashed #28a745;
+        background: #fff8e6;
       }
-      .description a {
-        color: #2a5298;
-        text-decoration: none;
-        font-weight: 600;
-        background: #fff3cd;
-        padding: 2px 8px;
-        border-radius: 6px;
-        transition: background 0.2s;
+      .print-hide {
+        display: inline-block;
       }
-      .description a:hover {
-        background: #ffeeba;
-        text-decoration: underline;
-      }
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-      li {
-        margin: 18px 0;
-        padding-left: 0;
-        font-size: 1.15em;
-        letter-spacing: 0.5px;
-      }
-      input[type="checkbox"] {
-        margin-right: 16px;
-        transform: scale(1.3);
-        vertical-align: middle;
-        accent-color: #2a5298;
-      }
-      .week h2,
-      .description h2 {
-        color: #2a5298;
-        font-weight: 700;
-        font-size: 1.15em;
-        margin-bottom: 18px;
-        letter-spacing: 0.5px;
-      }
-      @media (max-width: 900px) {
-        .tile {
-          padding: 20px 12px;
+      @media print {
+        .print-hide {
+          display: none;
         }
         body {
-          font-size: 1.1rem;
-        }
-      }
-      @media (max-width: 600px) {
-        .tile {
-          padding: 12px 6px;
-          margin-bottom: 18px;
-        }
-        h1 {
-          font-size: 1.4em;
-        }
-        body {
-          font-size: 1rem;
+          background: white;
         }
       }
     </style>
   </head>
-  <body class="container-fluid">
-    <h1>
-      3-Month Spring & Microservices Learning Planner (Start: 19th September)
-    </h1>
-    <div class="container-fluid">
-      <div class="row g-4 align-items-stretch">
-        <div class="col-md-6 d-flex">
-          <div class="tile description course1 flex-fill">
-            <h2>
-              Course 1: Spring & Spring Boot with JPA & Hibernate - Zero to
-              Master
-            </h2>
-            <p>
-              This course covers the fundamentals of Spring, Spring Boot, JPA,
-              and Hibernate to help you build production-ready applications with
-              strong database integration. You’ll start with core Spring and
-              Boot concepts, then move to JPA, Hibernate, and advanced
-              persistence handling.
-            </p>
-            <p>
-              <a
+  <body>
+    <div class="container py-3">
+      <div class="hero d-flex justify-content-between align-items-start">
+        <div>
+          <h1 class="mb-1">
+            Spring & Microservices Study Planner
+            <small
+              ><a
                 href="https://www.udemy.com/course/spring-springboot-jpa-hibernate-zero-to-master/"
                 target="_blank"
-                >Go to Course 1 on Udemy</a
+                >Course 1</a
               >
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile description course2 flex-fill">
-            <h2>
-              Course 2: Master Microservices with Spring Boot, Docker &
-              Kubernetes
-            </h2>
-            <p>
-              This course focuses on building scalable microservices
-              architectures using Spring Boot. It guides you through RESTful
-              microservices, service discovery, API gateways, and extends to
-              modern containerization and orchestration with Docker and
-              Kubernetes.
-            </p>
-            <p>
+              +
               <a
                 href="https://www.udemy.com/course/master-microservices-with-spring-docker-kubernetes/"
                 target="_blank"
-                >Go to Course 2 on Udemy</a
+                >Course 2</a
+              ></small
+            >
+          </h1>
+          <p class="mb-0 text-muted">
+            Start date: <strong>19 September</strong> · Duration: about 12 weeks
+            (excluding buffer weeks) · Buffer weeks after every 3 normal weeks
+          </p>
+        </div>
+        <div class="text-end print-hide">
+          <button
+            class="btn btn-outline-secondary btn-sm"
+            onclick="window.print()"
+          >
+            Print planner
+          </button>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Courses Overview & Links</h5>
+          <p class="mb-1">
+            <strong>Course 1: Spring & Spring Boot + JPA + Hibernate</strong> —
+            covers Spring Core, IoC/DI, AOP, Spring MVC, Spring Boot
+            auto-configuration, Spring Security, Spring JDBC, Spring Data JPA,
+            REST services, Actuator, logging, profiles, etc. <br /><a
+              href="https://www.udemy.com/course/spring-springboot-jpa-hibernate-zero-to-master/"
+              target="_blank"
+              >Go to Course 1 on Udemy</a
+            >
+          </p>
+          <p class="mb-1">
+            <strong
+              >Course 2: Master Microservices with Spring, Docker &
+              Kubernetes</strong
+            >
+            — covers microservices architecture, Spring Cloud (config, service
+            discovery, API Gateway), resilience (circuit breakers),
+            observability, security (OAuth2 / JWT), containerization (Docker),
+            Kubernetes & Helm. <br /><a
+              href="https://www.udemy.com/course/master-microservices-with-spring-docker-kubernetes/"
+              target="_blank"
+              >Go to Course 2 on Udemy</a
+            >
+          </p>
+          <p class="text-muted small">
+            This planner allocates first to Course 1 topics, then transitions
+            into Course 2’s microservices and infrastructure content, skipping
+            overlapping fundamentals.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-responsive mb-4">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Week</th>
+              <th>Dates</th>
+              <th>Course & Topics / Sections</th>
+              <th>Learning Focus</th>
+              <th>Practice / Deliverables</th>
+              <th class="text-center">Done</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Week 1 -->
+            <tr>
+              <td>Week 1</td>
+              <td>Oct 10 — Oct 16</td>
+              <td>
+                <strong>Course 1</strong>: Spring Core, IoC & DI, Bean Scopes
+              </td>
+              <td>
+                Understand Spring core, inversion of control, dependency
+                injection, bean lifecycle
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Build minimal Spring application with several bean types
+                  </li>
+                  <li>Experiment with scope (singleton, prototype)</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="1" />
+              </td>
+            </tr>
+
+            <!-- Week 2 -->
+            <tr>
+              <td>Week 2</td>
+              <td>Oct 17 — Oct 23</td>
+              <td>
+                <strong>Course 1</strong>: AOP, Bean Postprocessors, Conditional
+                Beans, Profiles
+              </td>
+              <td>
+                Learn aspect-oriented programming, bean postprocessors,
+                conditional configuration & profiles
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Implement logging/aspect advice using AOP</li>
+                  <li>
+                    Use conditional beans and profiles in your Spring config
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="2" />
+              </td>
+            </tr>
+
+            <!-- Week 3 -->
+            <tr>
+              <td>Week 3</td>
+              <td>Oct 24 — Oct 30</td>
+              <td>
+                <strong>Course 1</strong>: Spring MVC / Web, Controllers,
+                Validation, Views (Thymeleaf)
+              </td>
+              <td>
+                Build web layer: controllers, request mapping, form handling,
+                validation, templating
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Create a small MVC web app (form + view + validation)</li>
+                  <li>Use Thymeleaf templates for rendering</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="3" />
+              </td>
+            </tr>
+
+            <!-- Buffer Week -->
+            <tr class="buffer">
+              <td>Buffer</td>
+              <td>Oct 31 — Nov 6</td>
+              <td>Review & Catch-Up</td>
+              <td>
+                Consolidate Weeks 1–3, fix open items, and deepen understanding
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Go over notes & code from previous weeks</li>
+                  <li>Do extra coding exercises or small feature extensions</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="4" />
+              </td>
+            </tr>
+
+            <!-- Week 4 -->
+            <tr>
+              <td>Week 4</td>
+              <td>Nov 7 — Nov 13</td>
+              <td>
+                <strong>Course 1</strong>: Spring Boot Internals,
+                Auto-Configuration, Properties, Dev Tools
+              </td>
+              <td>
+                Learn what happens under the hood of Spring Boot,
+                auto-configuration, externalized properties
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Convert your MVC app into a Spring Boot application</li>
+                  <li>
+                    Configure application.properties, profiles, use devtools
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="5" />
+              </td>
+            </tr>
+
+            <!-- Week 5 -->
+            <tr>
+              <td>Week 5</td>
+              <td>Nov 14 — Nov 20</td>
+              <td>
+                <strong>Course 1</strong>: Spring Security — Authentication,
+                Authorization, CSRF, CORS
+              </td>
+              <td>
+                Secure web app: login, role-based access, CSRF, CORS, filters
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Add login & logout with roles to your MVC app</li>
+                  <li>Configure CSRF & CORS properly</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="6" />
+              </td>
+            </tr>
+
+            <!-- Week 6 -->
+            <tr>
+              <td>Week 6</td>
+              <td>Nov 21 — Nov 27</td>
+              <td>
+                <strong>Course 1</strong>: Spring JDBC, Intro to ORM, Basic
+                JPA/Hibernate
+              </td>
+              <td>Access databases: Spring JDBC then JPA/Hibernate basics</td>
+              <td>
+                <ul class="mb-0">
+                  <li>Implement data access via Spring JDBC</li>
+                  <li>
+                    Map simple entity using JPA/Hibernate and CRUD operations
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="7" />
+              </td>
+            </tr>
+
+            <!-- Buffer Week -->
+            <tr class="buffer">
+              <td>Buffer</td>
+              <td>Nov 28 — Dec 4</td>
+              <td>Review & Mid-Project</td>
+              <td>
+                Review database & security parts; build a small feature
+                combining web + database + security
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Build a mini module integrating web, data, and security
+                  </li>
+                  <li>Fix bugs, refactor, document</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="8" />
+              </td>
+            </tr>
+
+            <!-- Week 7 -->
+            <tr>
+              <td>Week 7</td>
+              <td>Dec 5 — Dec 11</td>
+              <td>
+                <strong>Course 1</strong>: JPA Advanced — Relationships, JPQL,
+                Pagination & Sorting
+              </td>
+              <td>
+                Deep dive into entity relationships, query methods,
+                pagination/sorting
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Design OneToOne, OneToMany, ManyToMany relationships</li>
+                  <li>Implement JPQL queries, pagination, sorting</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="9" />
+              </td>
+            </tr>
+
+            <!-- Week 8 -->
+            <tr>
+              <td>Week 8</td>
+              <td>Dec 12 — Dec 18</td>
+              <td>
+                <strong>Course 1</strong>: REST APIs, RestTemplate / WebClient,
+                Spring Data REST, Actuator
+              </td>
+              <td>
+                Expose your data via REST, consume REST, add observability via
+                Actuator
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Implement REST controllers for your entities</li>
+                  <li>Consume APIs via RestTemplate or WebClient</li>
+                  <li>Enable Spring Data REST and Actuator endpoints</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="10" />
+              </td>
+            </tr>
+
+            <!-- Buffer Week -->
+            <tr class="buffer">
+              <td>Buffer</td>
+              <td>Dec 19 — Dec 25</td>
+              <td>Review & Transition Prep</td>
+              <td>
+                Review REST, actuation, and prepare transition into
+                microservices course
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Refactor your app to modular services structure</li>
+                  <li>List microservices you want to build in Course 2</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="11" />
+              </td>
+            </tr>
+
+            <!-- Week 9 -->
+            <tr>
+              <td>Week 9</td>
+              <td>Dec 26 — Dec 31</td>
+              <td>
+                <strong>Course 2</strong>: Microservices Introduction, Monolith
+                → Microservices, Spring Boot Microservices setup
+              </td>
+              <td>
+                Learn microservices architecture, service decomposition,
+                starting microservices apps
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Plan microservice boundaries for your domain</li>
+                  <li>
+                    Create a simple microservice baseline (Spring Boot service)
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="12" />
+              </td>
+            </tr>
+
+            <!-- Week 10 -->
+            <tr>
+              <td>Week 10</td>
+              <td>Jan 1 — Jan 7</td>
+              <td>
+                <strong>Course 2</strong>: Service Discovery (Eureka), Load
+                Balancing (Ribbon / Spring Cloud LB)
+              </td>
+              <td>
+                Enable discovery & client-side load balancing among services
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Setup Eureka registry and register services</li>
+                  <li>
+                    Use load-balanced RestTemplate or WebClient across instances
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="13" />
+              </td>
+            </tr>
+
+            <!-- Week 11 -->
+            <tr>
+              <td>Week 11</td>
+              <td>Jan 8 — Jan 14</td>
+              <td>
+                <strong>Course 2</strong>: API Gateway, Spring Cloud Config,
+                Distributed Tracing
+              </td>
+              <td>
+                Introduce centralized config, routing via gateway, trace
+                tracking
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Create a Spring Cloud Config server</li>
+                  <li>Implement API Gateway routing to services</li>
+                  <li>
+                    Enable distributed tracing (e.g. Sleuth / OpenTracing)
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="14" />
+              </td>
+            </tr>
+
+            <!-- Buffer Week -->
+            <tr class="buffer">
+              <td>Buffer</td>
+              <td>Jan 15 — Jan 21</td>
+              <td>Review Microservices Fundamentals</td>
+              <td>
+                Consolidate microservices, fix gaps, plan containerization steps
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Refine services, config, gateway setup</li>
+                  <li>Sketch docker/k8s deployment plan</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="15" />
+              </td>
+            </tr>
+
+            <!-- Week 12 -->
+            <tr>
+              <td>Week 12</td>
+              <td>Jan 22 — Jan 28</td>
+              <td>
+                <strong>Course 2</strong>: Dockerizing Microservices, Docker
+                Compose, Persistence
+              </td>
+              <td>
+                Containerize microservices, link services, use volumes and DB
+                containers
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Create Dockerfiles for each service</li>
+                  <li>Use Docker Compose to spin up multi-container app</li>
+                  <li>Manage data persistence & volumes</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="16" />
+              </td>
+            </tr>
+
+            <!-- Week 13 -->
+            <tr>
+              <td>Week 13</td>
+              <td>Jan 29 — Feb 4</td>
+              <td>
+                <strong>Course 2</strong>: Kubernetes Basics, Deploy
+                Microservices to K8s, ConfigMaps & Secrets
+              </td>
+              <td>Learn Kubernetes deployment, config management, secrets</td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Deploy your services to Kubernetes (minikube or cloud)
+                  </li>
+                  <li>Use ConfigMaps & Secrets for service configs</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="17" />
+              </td>
+            </tr>
+
+            <!-- Week 14 -->
+            <tr>
+              <td>Week 14</td>
+              <td>Feb 5 — Feb 11</td>
+              <td>
+                <strong>Course 2</strong>: Scaling & Load Balancing in K8s,
+                Monitoring & Logging, Final Project
+              </td>
+              <td>
+                Scale services, set up monitoring & logging, deliver a final
+                microservices project
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>Configure Horizontal Pod Autoscaling & LB in k8s</li>
+                  <li>Add Prometheus / Grafana monitoring or logging stack</li>
+                  <li>Complete and present your microservices project</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="18" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mb-4">
+        <div
+          class="card-body d-flex justify-content-between align-items-center gap-3"
+        >
+          <div>
+            <h6 class="mb-1">Overall Progress</h6>
+            <div class="progress" style="height: 12px">
+              <div
+                id="overallBar"
+                class="progress-bar"
+                role="progressbar"
+                style="width: 0%"
               >
-            </p>
+                0%
+              </div>
+            </div>
+          </div>
+          <div class="text-end">
+            <small class="text-muted"
+              >Weeks completed: <span id="completedCount">0</span>/18</small
+            >
           </div>
         </div>
       </div>
-      <div class="row g-4 align-items-stretch">
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>
-              Week 1 (Sep 19 - Sep 25): Course 1 - Spring & Spring Boot Zero to
-              Master
-            </h2>
-            <ul>
-              <li><input type="checkbox" /> Introduction & Setup</li>
-              <li>
-                <input type="checkbox" /> Spring Core & Spring Framework Basics
-              </li>
-              <li><input type="checkbox" /> Spring Boot Overview</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 2 (Sep 26 - Oct 2): Course 1</h2>
-            <ul>
-              <li>
-                <input type="checkbox" /> Dependency Injection & Inversion of
-                Control
-              </li>
-              <li>
-                <input type="checkbox" /> Spring Boot Annotations &
-                Configuration
-              </li>
-              <li><input type="checkbox" /> Spring Boot Starter Projects</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 3 (Oct 3 - Oct 9): Course 1</h2>
-            <ul>
-              <li><input type="checkbox" /> Spring Data JPA Fundamentals</li>
-              <li><input type="checkbox" /> Hibernate Basics</li>
-              <li><input type="checkbox" /> CRUD with JPA & Hibernate</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week buffer flex-fill">
-            <h2>Buffer Week 1 (Oct 10 - Oct 16)</h2>
-            <ul>
-              <li><input type="checkbox" /> Revision of Spring Boot & JPA</li>
-              <li><input type="checkbox" /> Extra Practice Assignments</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 4 (Oct 17 - Oct 23): Course 1</h2>
-            <ul>
-              <li><input type="checkbox" /> Spring Data Repositories</li>
-              <li><input type="checkbox" /> Query Methods & JPQL</li>
-              <li>
-                <input type="checkbox" /> Relationships (OneToOne, OneToMany,
-                ManyToMany)
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 5 (Oct 24 - Oct 30): Course 1</h2>
-            <ul>
-              <li><input type="checkbox" /> Transaction Management</li>
-              <li><input type="checkbox" /> Caching & Performance Tuning</li>
-              <li><input type="checkbox" /> Error Handling</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 6 (Oct 31 - Nov 6): Course 1</h2>
-            <ul>
-              <li><input type="checkbox" /> Spring Boot REST APIs</li>
-              <li><input type="checkbox" /> Building & Testing REST APIs</li>
-              <li><input type="checkbox" /> Connecting REST with Database</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week buffer flex-fill">
-            <h2>Buffer Week 2 (Nov 7 - Nov 13)</h2>
-            <ul>
-              <li>
-                <input type="checkbox" /> Project Work (Spring Boot + JPA)
-              </li>
-              <li>
-                <input type="checkbox" /> Reinforce Hibernate Relationships
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 7 (Nov 14 - Nov 20): Course 2 - Master Microservices</h2>
-            <ul>
-              <li><input type="checkbox" /> Microservices Introduction</li>
-              <li>
-                <input type="checkbox" /> Monolithic vs Microservices
-                Architecture
-              </li>
-              <li>
-                <input type="checkbox" /> Setting up Microservices with Spring
-                Boot
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 8 (Nov 21 - Nov 27): Course 2</h2>
-            <ul>
-              <li><input type="checkbox" /> RESTful Microservices</li>
-              <li><input type="checkbox" /> Inter-Service Communication</li>
-              <li>
-                <input type="checkbox" /> Service Registry & Discovery (Eureka)
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 9 (Nov 28 - Dec 4): Course 2</h2>
-            <ul>
-              <li><input type="checkbox" /> API Gateway</li>
-              <li><input type="checkbox" /> Centralized Configuration</li>
-              <li><input type="checkbox" /> Distributed Tracing</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week buffer flex-fill">
-            <h2>Buffer Week 3 (Dec 5 - Dec 11)</h2>
-            <ul>
-              <li>
-                <input type="checkbox" /> Revision: Microservices Core Concepts
-              </li>
-              <li><input type="checkbox" /> Extra Hands-on Projects</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 10 (Dec 12 - Dec 18): Course 2</h2>
-            <ul>
-              <li><input type="checkbox" /> Dockerizing Microservices</li>
-              <li><input type="checkbox" /> Docker Compose</li>
-              <li><input type="checkbox" /> Persistence & Volumes</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 11 (Dec 19 - Dec 25): Course 2</h2>
-            <ul>
-              <li><input type="checkbox" /> Kubernetes Basics</li>
-              <li>
-                <input type="checkbox" /> Deploying Microservices on Kubernetes
-              </li>
-              <li><input type="checkbox" /> ConfigMaps & Secrets</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week flex-fill">
-            <h2>Week 12 (Dec 26 - Jan 1): Course 2</h2>
-            <ul>
-              <li>
-                <input type="checkbox" /> Scaling & Load Balancing in Kubernetes
-              </li>
-              <li><input type="checkbox" /> Monitoring & Logging</li>
-              <li>
-                <input type="checkbox" /> Final Project: Spring Microservices +
-                Docker + Kubernetes
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="tile week buffer flex-fill">
-            <h2>Buffer Week 4 (Jan 2 - Jan 8)</h2>
-            <ul>
-              <li>
-                <input type="checkbox" /> Wrap-up & Final Project Completion
-              </li>
-              <li><input type="checkbox" /> Prepare Notes & Portfolio</li>
-            </ul>
-          </div>
-        </div>
+
+      <div class="text-muted small">
+        Tip: Use a notebook (Jupyter, IntelliJ, or Spring projects) for each
+        week’s work. Document your APIs, data models, configurations, deployment
+        YAMLs, and lessons learned.
       </div>
     </div>
+
+    <script>
+      const checks = document.querySelectorAll(".week-check");
+      const total = checks.length;
+      const overallBar = document.getElementById("overallBar");
+      const completedCount = document.getElementById("completedCount");
+
+      function updateProgress() {
+        const done = Array.from(checks).filter((c) => c.checked).length;
+        const pct = Math.round((done / total) * 100);
+        overallBar.style.width = pct + "%";
+        overallBar.textContent = pct + "%";
+        completedCount.textContent = done + "/" + total;
+      }
+      checks.forEach((c) => c.addEventListener("change", updateProgress));
+      updateProgress();
+    </script>
   </body>
 </html>

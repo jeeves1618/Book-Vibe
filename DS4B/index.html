@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Science for Business — 10-Week Study Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #0d6efd;
+        --muted: #6c757d;
+      }
+      body {
+        background: #f7fbff;
+        color: #0b2545;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial;
+        margin: 18px;
+      }
+      .hero {
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.06),
+          rgba(13, 110, 253, 0.02)
+        );
+        padding: 18px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+      }
+      h1 small {
+        display: block;
+        font-size: 0.6em;
+        color: var(--muted);
+      }
+      .card {
+        border-radius: 12px;
+      }
+      .week-card {
+        border-radius: 10px;
+      }
+      .buffer {
+        background: #fff8e6;
+      }
+      .print-hide {
+        display: inline-block;
+      }
+      table thead th {
+        background: #ffffffcc;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(4px);
+      }
+      @media print {
+        .print-hide {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-3">
+      <div class="hero d-flex justify-content-between align-items-start">
+        <div>
+          <h1 class="mb-1">
+            Data Science for Business — 10-Week Study Planner
+            <small>Data Science for Business by <i>Provost & Fawcett</i></small>
+          </h1>
+          <p class="mb-0 text-muted">
+            Start date: <strong>1 December 2025</strong> · Duration: 10 weeks ·
+            Weekly milestones (one chapter per week). Link to book:<a
+              href="https://learning.oreilly.com/library/view/data-science-for/9781449374273/"
+              target="_blank"
+            >
+              O'Reilly</a
+            >,
+            <a
+              href="https://www.amazon.in/Data-Science-Business-Data-Analytic-Thinking-ebook/dp/B00E6EQ3X4/"
+              target="_blank"
+              >Amazon</a
+            >
+          </p>
+        </div>
+        <div class="text-end print-hide">
+          <button
+            class="btn btn-outline-secondary btn-sm"
+            onclick="window.print()"
+          >
+            Print planner
+          </button>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">About the book</h5>
+          <p class="mb-1">
+            <strong>Data Science for Business</strong> by Foster Provost and Tom
+            Fawcett teaches data-analytic thinking and the principles behind
+            data mining and predictive modeling — focusing on how to apply these
+            techniques to real business problems.
+          </p>
+          <p class="mb-0 text-muted">
+            Planner maps one chapter per week plus a final wrap-up week. Each
+            week includes reading goals and practical exercises to translate the
+            chapter concepts into hands-on work.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Week</th>
+              <th>Dates</th>
+              <th>Chapter (Reading)</th>
+              <th>Focus / Learning Goals</th>
+              <th>Practice / Deliverables</th>
+              <th class="text-center">Done</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Week 1</td>
+              <td>Dec 1 — Dec 7, 2025</td>
+              <td>1. Introduction: Data‑Analytic Thinking</td>
+              <td>
+                Understand data‑analytic thinking, problem framing, CRISP‑DM
+                style workflow.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Create a one‑page summary: what is data‑analytic thinking?
+                  </li>
+                  <li>
+                    Find one business problem and frame it as a data problem.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="1" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 2</td>
+              <td>Dec 8 — Dec 14, 2025</td>
+              <td>2. Business Problems and Data Science Solutions</td>
+              <td>
+                Map business objectives to analytic tasks; cost/benefit
+                thinking; evaluation metrics for business.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Pick the business problem from Week 1 and define success
+                    metrics.
+                  </li>
+                  <li>
+                    Sketch a decision‑analytic flow (who acts on model output?).
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="2" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 3</td>
+              <td>Dec 15 — Dec 21, 2025</td>
+              <td>
+                3. Introduction to Predictive Modeling: From Correlation to
+                Supervised Segmentation
+              </td>
+              <td>
+                Learn supervised vs unsupervised, segmentation, predictive vs
+                descriptive; basics of modeling.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Run a simple supervised model (e.g., logistic regression) on
+                    a small dataset.
+                  </li>
+                  <li>
+                    Try a clustering algorithm and compare segmentation vs
+                    supervised labels.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="3" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-warning">Buffer</td>
+              <td>Dec 22 — Dec 28, 2025</td>
+              <td>Review / Catch‑up</td>
+              <td>
+                Consolidate Weeks 1–3, finish any incomplete practice, refine
+                problem framing.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Polish the Week 1–3 notebooks and write a short README.
+                  </li>
+                  <li>
+                    If needed, add extra experiments (feature ideas, baseline
+                    models).
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="4" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 4</td>
+              <td>Dec 29 — Jan 4, 2026</td>
+              <td>4. Fitting a Model to Data</td>
+              <td>
+                Model fitting principles, loss functions, training/validation
+                splits, overfitting signals.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Implement training/validation split and measure performance.
+                  </li>
+                  <li>
+                    Experiment with different loss functions for a
+                    regression/classification task.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="5" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 5</td>
+              <td>Jan 5 — Jan 11, 2026</td>
+              <td>5. Overfitting and Its Avoidance</td>
+              <td>
+                Bias‑variance tradeoff, regularization, cross‑validation, model
+                selection strategies.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Run k‑fold cross‑validation and compare model complexity vs
+                    performance.
+                  </li>
+                  <li>Apply regularization (L1/L2) and document effects.</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="6" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 6</td>
+              <td>Jan 12 — Jan 18, 2026</td>
+              <td>6. Similarity, Neighbors, and Clusters</td>
+              <td>
+                Distance metrics, k‑NN, clustering algorithms, evaluating
+                clusters.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Implement k‑NN classifier and measure sensitivity to K and
+                    scaling.
+                  </li>
+                  <li>
+                    Run k‑means and hierarchical clustering; evaluate cluster
+                    quality (silhouette).
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="7" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-warning">Buffer</td>
+              <td>Jan 19 — Jan 25, 2026</td>
+              <td>Review / Project</td>
+              <td>
+                Consolidate Weeks 4–6, refine models, and prepare mid‑book mini
+                project.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Create a mini project combining model fitting and cluster
+                    analysis on a single dataset.
+                  </li>
+                  <li>Document choices and business implications.</li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="8" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 7</td>
+              <td>Jan 26 — Feb 1, 2026</td>
+              <td>7. Decision Analytic Thinking I: What Is a Good Model?</td>
+              <td>
+                Decision theory basics, utility, cost-sensitive decisions,
+                aligning models to business value.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Compute expected value of model‑driven actions for your Week
+                    1 problem.
+                  </li>
+                  <li>
+                    Explore cost‑sensitive thresholds and choose an operating
+                    point.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="9" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 8</td>
+              <td>Feb 2 — Feb 8, 2026</td>
+              <td>8. Visualizing Model Performance</td>
+              <td>
+                ROC, precision–recall curves, lift charts, calibration — visual
+                tools to evaluate models.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Plot ROC and PR curves for models built earlier; compute AUC
+                    and PR‑AUC.
+                  </li>
+                  <li>
+                    Create calibration plots and lift charts; interpret results.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="10" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 9</td>
+              <td>Feb 9 — Feb 15, 2026</td>
+              <td>9. Evidence and Probabilities</td>
+              <td>
+                Thinking probabilistically, Bayesian vs frequentist views,
+                likelihood ratios, evidence aggregation.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Work through a probability model and compute
+                    posterior/likelihood for a simple case.
+                  </li>
+                  <li>
+                    Discuss how probabilistic outputs affect decision
+                    thresholds.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="11" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Week 10</td>
+              <td>Feb 16 — Feb 22, 2026</td>
+              <td>10. Representing and Mining Text</td>
+              <td>
+                Text representations (bag‑of‑words, TF‑IDF), tokenization, basic
+                NLP for predictive tasks.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Build TF‑IDF features from a small corpus and train a
+                    classifier.
+                  </li>
+                  <li>
+                    Try simple text preprocessing pipelines (stopwords,
+                    stemming/lemmatization).
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="12" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-success">Wrap‑up</td>
+              <td>Feb 23 — Feb 29, 2026</td>
+              <td>Final Review & Project</td>
+              <td>
+                Consolidate all chapters; finalize a capstone project that
+                demonstrates business value.
+              </td>
+              <td>
+                <ul class="mb-0">
+                  <li>
+                    Finish a capstone notebook combining problem framing,
+                    modeling, evaluation, and decision analysis.
+                  </li>
+                  <li>
+                    Prepare a 1‑page summary and deliverables for portfolio.
+                  </li>
+                </ul>
+              </td>
+              <td class="text-center">
+                <input type="checkbox" class="week-check" data-week="13" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card my-3">
+        <div
+          class="card-body d-flex justify-content-between align-items-center gap-3"
+        >
+          <div>
+            <h6 class="mb-1">Overall Progress</h6>
+            <div class="progress" style="height: 12px">
+              <div
+                id="overallBar"
+                class="progress-bar"
+                role="progressbar"
+                style="width: 0%"
+              >
+                0%
+              </div>
+            </div>
+          </div>
+          <div class="text-end">
+            <small class="text-muted"
+              >Weeks completed: <span id="completedCount">0</span>/13</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="text-muted small">
+        Tips: Use Jupyter or Colab for notebooks. Keep each week’s work in a
+        separate notebook and add a README describing dataset, modeling choices,
+        and business impact.
+      </div>
+    </div>
+
+    <script>
+      const checks = document.querySelectorAll(".week-check");
+      const total = document.querySelectorAll(".week-check").length + 1; // +1 for wrap-up row
+      const overallBar = document.getElementById("overallBar");
+      const completedCount = document.getElementById("completedCount");
+
+      function updateProgress() {
+        const done = Array.from(
+          document.querySelectorAll(".week-check")
+        ).filter((c) => c.checked).length;
+        // include wrap-up checkbox (last) if present
+        const pct = Math.round((done / total) * 100);
+        overallBar.style.width = pct + "%";
+        overallBar.textContent = pct + "%";
+        completedCount.textContent = done + "/" + total;
+      }
+      checks.forEach((c) => c.addEventListener("change", updateProgress));
+      updateProgress();
+    </script>
+  </body>
+</html>
