@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-Month Study Planner — 100 Days of Code & FastAPI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        max-width: 900px;
+        margin-top: 40px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2,
+      h3 {
+        color: #007bff;
+      }
+      .progress {
+        height: 25px;
+        margin-bottom: 20px;
+      }
+      .week-card {
+        margin-bottom: 20px;
+        border-left: 6px solid #007bff;
+        padding-left: 15px;
+        background: #f1f8ff;
+        border-radius: 10px;
+      }
+      .checkbox {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mb-4">
+        3-Month Study Planner: 100 Days of Code (Python) + FastAPI
+      </h2>
+
+      <p><strong>Start Date:</strong> December 1, 2025</p>
+
+      <h3>Course 1: 100 Days of Code – The Complete Python Pro Bootcamp</h3>
+      <p>
+        <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank"
+          >Visit Course</a
+        >
+      </p>
+      <p>
+        This course covers Python fundamentals through hands-on projects — from
+        beginner concepts to advanced applications including APIs and up to Day
+        53.
+      </p>
+
+      <h3>Course 2: FastAPI – The Complete Course</h3>
+      <p>
+        <a
+          href="https://www.udemy.com/course/fastapi-the-complete-course/"
+          target="_blank"
+          >Visit Course</a
+        >
+      </p>
+      <p>
+        This course explores modern web backend development using FastAPI,
+        covering API design, authentication, database integration, Docker
+        deployment, and advanced techniques.
+      </p>
+
+      <hr />
+
+      <h3 class="mt-4">Weekly Planner</h3>
+
+      <div class="progress">
+        <div
+          id="progress-bar"
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%"
+        >
+          0%
+        </div>
+      </div>
+
+      <div id="planner">
+        <!-- Weeks 1-3: 100 Days of Code -->
+        <div class="week-card">
+          <h5>Week 1 (Dec 1 - Dec 7)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 1–7: Python Basics, Data Types, Control Flow</li>
+            <li>
+              Project: Beginner Python Projects (Band Name Generator, Tip
+              Calculator)
+            </li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 2 (Dec 8 - Dec 14)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 8–14: Functions, Loops, Lists, Dictionaries</li>
+            <li>Project: Caesar Cipher, Blackjack, Number Guessing Game</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 3 (Dec 15 - Dec 21)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 15–21: File Handling, Functions with Outputs, Scope</li>
+            <li>Project: Coffee Machine Simulation</li>
+          </ul>
+        </div>
+
+        <div class="week-card bg-light">
+          <h5>Buffer Week (Dec 22 - Dec 28)</h5>
+          <p>Review Python Basics & Projects</p>
+        </div>
+
+        <!-- Weeks 4-6 -->
+        <div class="week-card">
+          <h5>Week 4 (Dec 29 - Jan 4)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 22–28: Object-Oriented Programming (OOP)</li>
+            <li>Project: Quiz Game, Turtle Graphics</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 5 (Jan 5 - Jan 11)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 29–35: GUI Development, Tkinter, File Paths</li>
+            <li>Project: Password Manager, Pomodoro App</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 6 (Jan 12 - Jan 18)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 36–42: Error Handling, APIs, JSON</li>
+            <li>Project: Stock Trading News Alert, Habit Tracker</li>
+          </ul>
+        </div>
+
+        <div class="week-card bg-light">
+          <h5>Buffer Week (Jan 19 - Jan 25)</h5>
+          <p>Consolidate GUI and API projects</p>
+        </div>
+
+        <!-- Weeks 7-9 -->
+        <div class="week-card">
+          <h5>Week 7 (Jan 26 - Feb 1)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 43–49: Web Scraping, Data Analysis with Pandas</li>
+            <li>Project: Data Visualization Dashboard</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 8 (Feb 2 - Feb 8)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 50–56: Flask Web Development</li>
+            <li>Project: Blog Website, REST API</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 9 (Feb 9 - Feb 15)</h5>
+          <ul>
+            <li>Course: 100 Days of Code</li>
+            <li>Days 57–63: Data Science, NumPy, Matplotlib</li>
+            <li>Project: Data Science Portfolio Project</li>
+          </ul>
+        </div>
+
+        <div class="week-card bg-light">
+          <h5>Buffer Week (Feb 16 - Feb 22)</h5>
+          <p>Revise Flask and Data Science modules</p>
+        </div>
+
+        <!-- Weeks 10-12: FastAPI Course -->
+        <div class="week-card">
+          <h5>Week 10 (Feb 23 - Mar 1)</h5>
+          <ul>
+            <li>Course: FastAPI – The Complete Course</li>
+            <li>Days 1–18: FastAPI Basics, Path Parameters, Query Params</li>
+            <li>Project: Basic REST API with CRUD</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 11 (Mar 2 - Mar 8)</h5>
+          <ul>
+            <li>Course: FastAPI – The Complete Course</li>
+            <li>Days 19–36: Pydantic Models, Authentication, SQL Databases</li>
+            <li>Project: Authenticated User API</li>
+          </ul>
+        </div>
+
+        <div class="week-card">
+          <h5>Week 12 (Mar 9 - Mar 15)</h5>
+          <ul>
+            <li>Course: FastAPI – The Complete Course</li>
+            <li>Days 37–53: Docker, Deployment, Testing</li>
+            <li>Project: Deploy FastAPI App on Docker</li>
+          </ul>
+        </div>
+
+        <div class="week-card bg-light">
+          <h5>Buffer Week (Mar 16 - Mar 22)</h5>
+          <p>Revise FastAPI concepts and finalize portfolio projects</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary mt-3" onclick="updateProgress()">
+        Update Progress
+      </button>
+      <button class="btn btn-outline-secondary mt-3" onclick="window.print()">
+        Print Planner
+      </button>
+    </div>
+
+    <script>
+      function updateProgress() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const checked = Array.from(checkboxes).filter((c) => c.checked).length;
+        const percent = (checked / checkboxes.length) * 100;
+        document.getElementById("progress-bar").style.width = percent + "%";
+        document.getElementById("progress-bar").textContent =
+          Math.round(percent) + "%";
+      }
+    </script>
+  </body>
+</html>
