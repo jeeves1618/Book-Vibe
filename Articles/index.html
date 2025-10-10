@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tech Narratives — Index</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f1115;
+        --card: #0f1720;
+        --muted: #94a3b8;
+        --accent: #ff6b6b;
+        --glass: rgba(255, 255, 255, 0.03);
+        --maxw: 850px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+        background: linear-gradient(180deg, #07080a 0%, #0d1013 60%);
+        color: #e6eef6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 100%;
+        max-width: var(--maxw);
+      }
+      header {
+        margin-bottom: 28px;
+      }
+      .kicker {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      h1 {
+        font-family: Merriweather, serif;
+        font-size: 34px;
+        line-height: 1.06;
+        margin: 6px 0 12px;
+      }
+      .lead {
+        margin-top: 8px;
+        color: #cfe6ff;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        border-radius: 14px;
+        padding: 24px;
+        margin-top: 22px;
+        box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      h2 {
+        font-family: Merriweather, serif;
+        font-size: 22px;
+        margin: 0 0 10px;
+        color: #fff;
+      }
+      p {
+        color: #d7eaf7;
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      footer {
+        margin-top: 40px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="kicker">Tech Narratives</div>
+        <h1>Index of Articles</h1>
+        <p class="lead"></p>
+      </header>
+
+      <section>
+        <a href="/Articles/0001/index.html">
+          <div class="card">
+            <h2>The Monolith and the Bazaar of Computing</h2>
+            <p>
+              Why Mainframes still whisper in one voice while modern distributed
+              systems shout across the internet — and what serialization has to
+              do with it.
+            </p>
+          </div>
+        </a>
+        <!-- Future articles can be added below using the same pattern -->
+      </section>
+
+      <footer>
+        <p>Crafted for those who see the beauty in code and architecture.</p>
+      </footer>
+    </main>
+  </body>
+</html>
