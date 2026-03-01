@@ -86,7 +86,10 @@ function renderBooks(books) {
   years.forEach((year) => {
     const yearBooks = booksByYear[year];
     // compute total cost for the year using numeric cost field
-    const totalCost = yearBooks.reduce((sum, b) => sum + (parseFloat(b.costInLocalCurrency) || 0), 0);
+    const totalCost = yearBooks.reduce(
+      (sum, b) => sum + (parseFloat(b.costInLocalCurrency) || 0),
+      0,
+    );
 
     // Year header row
     const yearRow = document.createElement("tr");
