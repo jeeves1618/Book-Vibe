@@ -1,5 +1,22 @@
 let allBooks = [];
 
+// helper to convert formatted currency strings to numbers (removes symbols/commas)
+// still available in case other fields need it, but sums use numeric cost
+function parseCurrency(str) {
+  if (!str) return 0;
+  const num = str.replace(/[^0-9.-]+/g, "");
+  return parseFloat(num) || 0;
+}
+
+// format number using Indian currency conventions (₹, lakh/crore grouping)
+function formatIndianCurrency(amount) {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 2,
+  }).format(amount);
+}
+
 async function loadAndDisplayBooks() {
   const url =
     "https://raw.githubusercontent.com/jeeves1618/Spring-Learnings/refs/heads/master/Librarian%202.0/src/main/resources/book-list.json";
@@ -44,7 +61,7 @@ async function loadAndDisplayBooks() {
     }
   } catch (error) {
     const tbody = document.getElementById("book-table-body");
-    tbody.innerHTML = `<tr><td colspan="5">Failed to load books: ${error.message}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7">Failed to load books: ${error.message}</td></tr>`;
   }
 }
 
@@ -67,14 +84,20 @@ function renderBooks(books) {
 
   let serialNumber = books.length;
   years.forEach((year) => {
+    const yearBooks = booksByYear[year];
+    // compute total cost for the year using numeric cost field
+    const totalCost = yearBooks.reduce((sum, b) => sum + (parseFloat(b.costInLocalCurrency) || 0), 0);
+
     // Year header row
     const yearRow = document.createElement("tr");
     yearRow.style.background = "#e8e8e8";
     yearRow.style.fontWeight = "bold";
-    yearRow.innerHTML = `<td colspan="5">${year} &mdash; ${booksByYear[year].length} book(s)</td>`;
+    yearRow.innerHTML = `<td colspan="7">${year} &mdash; ${yearBooks.length} book(s) &mdash; total cost: ${formatIndianCurrency(
+      totalCost,
+    )}</td>`;
     tbody.appendChild(yearRow);
 
-    booksByYear[year].forEach((book) => {
+    yearBooks.forEach((book) => {
       const tr = document.createElement("tr");
       // Add shoppingUrl as link to title, open in new window if available
       const titleCell = book.shoppingUrl
@@ -85,6 +108,8 @@ function renderBooks(books) {
         <td>${titleCell}</td>
         <td>${book.authorFirstName} ${book.authorLastName}</td>
         <td>${book.bookGenre}</td>
+        <td>${book.typeOfBinding || ""}</td>
+        <td>${book.costInLocalCurrencyFmtd || ""}</td>
         <td>${book._sortDate}</td>
       `;
       tbody.appendChild(tr);

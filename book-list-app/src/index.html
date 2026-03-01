@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -72,6 +72,18 @@
       }
       th:nth-child(5),
       td:nth-child(5) {
+        min-width: 90px;
+        max-width: 140px;
+        white-space: normal;
+      }
+      th:nth-child(6),
+      td:nth-child(6) {
+        min-width: 110px;
+        max-width: 160px;
+        white-space: nowrap;
+      }
+      th:nth-child(7),
+      td:nth-child(7) {
         min-width: 110px;
         max-width: 160px;
         white-space: nowrap;
@@ -148,7 +160,13 @@
           content: "Genre";
         }
         td:nth-child(5):before {
-          content: "Date of Purchase";
+          content: "Binding";
+        }
+        td:nth-child(6):before {
+          content: "Cost";
+        }
+        td:nth-child(7):before {
+          content: "Date";
         }
       }
     </style>
@@ -168,6 +186,8 @@
             <th>Title</th>
             <th>Author</th>
             <th>Genre</th>
+            <th>Type of Binding</th>
+            <th>Cost</th>
             <th>Most Recent <br />Reading</th>
           </tr>
         </thead>
